@@ -1,0 +1,6 @@
+{
+  "name": "AI Studio Web Guide",
+  "description": "An interactive showcase and step-by-step guide illustrating how to build visually stunning, fully functional React websites inside Google AI Studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
