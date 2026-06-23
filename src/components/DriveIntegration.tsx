@@ -24,9 +24,7 @@ export default function DriveIntegration({
   onLogEvent,
 }: DriveIntegrationProps) {
   // Authentication & token states
-  const [accessToken, setAccessToken] = useState<string | null>(() => {
-    return sessionStorage.getItem('google_drive_access_token') || null;
-  });
+  const [accessToken, setAccessToken] = useState<string | null>(null);
   const [isAuthorizing, setIsAuthorizing] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   
@@ -135,7 +133,6 @@ export default function DriveIntegration({
       const token = params.get('access_token');
       if (token) {
         setAccessToken(token);
-        sessionStorage.setItem('google_drive_access_token', token);
         setIsDemoMode(false);
         setErrorMsg(null);
         window.location.hash = ''; // clear hash
@@ -217,7 +214,6 @@ export default function DriveIntegration({
 
   const handleDisconnect = () => {
     setAccessToken(null);
-    sessionStorage.removeItem('google_drive_access_token');
     setIsDemoMode(true);
     setFiles([]);
     if (onLogEvent) {
