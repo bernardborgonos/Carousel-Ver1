@@ -262,11 +262,11 @@ export default function App() {
         <div className="mx-auto flex max-w-5xl items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600 text-white font-extrabold text-sm shadow-sm shadow-indigo-600/30">
-              ★
+              C
             </span>
             <div className="flex flex-col">
               <span className="font-sans font-extrabold text-slate-900 tracking-tight leading-none text-sm">
-                UNIT@C = Underground Nomadic Information Technology
+                UNIT@C
               </span>
               <span className="text-[9px] font-mono font-bold text-indigo-600 uppercase tracking-widest mt-0.5">
                 UNIT2C Cacousel 3D
@@ -304,7 +304,7 @@ export default function App() {
         <div className="mx-auto max-w-5xl px-6 relative z-10">
           <div className="flex flex-wrap items-center gap-2.5 mb-6" id="hero-taglines">
             <span className="inline-flex items-center gap-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs font-semibold text-indigo-400">
-              <Sparkles className="h-3 w-3 animate-pulse" /> Recreated UNIT@C = Underground Nomadic Information Technology v2.0
+              <Sparkles className="h-3 w-3 animate-pulse" /> Recreated UNIT2C Cacousel v2.0
             </span>
             <span className="inline-flex items-center gap-1 rounded-full border border-slate-800 bg-slate-900 px-3 py-1 text-xs font-medium text-slate-400">
               <Terminal className="h-3 w-3 text-slate-500" /> React 19 Hardware Presets
@@ -316,7 +316,7 @@ export default function App() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-400 sm:text-base" id="hero-lead">
-            Experience absolute coordinate projection engineering. Below is an exhaustive 1:1 functional recreation of UNIT@C = Underground Nomadic Information Technology' signature <strong>UNIT2C Cacousel jQuery plugin</strong>, fully reprogrammed as a physics-driven, hardware-accelerated, custom theoretical 3D model in robust React 19.
+            Experience absolute coordinate projection engineering. Below is an exhaustive 1:1 functional recreation of UNIT@C's signature <strong>UNIT2C Cacousel plugin</strong>, fully reprogrammed as a physics-driven, hardware-accelerated, custom theoretical 3D model in robust React 19.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4" id="hero-cta-buttons">
@@ -480,7 +480,7 @@ export default function App() {
             <div className="flex items-center justify-center md:justify-start gap-2">
               <span className="h-2 w-2 rounded-full bg-indigo-600" />
               <span className="font-bold text-slate-900 tracking-tight text-sm">
-                AI Studio Web Guide
+                UNIT@C Web Guide
               </span>
             </div>
             <p className="text-2xs text-slate-500 leading-relaxed max-w-sm">
@@ -491,7 +491,7 @@ export default function App() {
           <div className="flex gap-1 items-center text-2xs text-slate-400 font-mono" id="copyright-box">
             <span>Compiled & Audited with</span>
             <Heart className="h-3 w-3 text-rose-500 fill-rose-500 animate-pulse" />
-            <span>in AI Studio, June 2026</span>
+            <span>by UNIT@C, 2026</span>
           </div>
         </div>
       </footer>

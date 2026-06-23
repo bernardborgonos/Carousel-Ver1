@@ -4,6 +4,18 @@ import { Check, Flame, Pocket, Target } from 'lucide-react';
 export default function LicensingCard() {
   const tiers = [
     {
+      name: 'Trial Version',
+      price: '$0',
+      icon: <Pocket className="h-5 w-5 text-indigo-600" />,
+      features: [
+        'Limited API calls and usage constraints',
+        'Watermarked usage on frontend display',
+        'Development & testing only',
+        'No direct maintenance support'
+      ],
+      isPopular: false,
+    },
+    {
       name: 'Single Site License',
       price: '$19',
       icon: <Pocket className="h-5 w-5 text-indigo-600" />,
@@ -60,7 +72,7 @@ export default function LicensingCard() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch" id="licensing-cards-row">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch" id="licensing-cards-row">
           {tiers.map((tier, idx) => (
             <div
               key={tier.name}
