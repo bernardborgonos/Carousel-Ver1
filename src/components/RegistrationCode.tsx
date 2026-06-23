@@ -14,7 +14,7 @@ export default function RegistrationCode() {
       <div className="bg-slate-50 border border-slate-100 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold text-slate-900 mb-4 tracking-tight">Professional Marketing Statement</h3>
         <p className="text-slate-700 leading-relaxed italic">
-          "Unlock the full potential of StarPlugins with our exclusive lifetime license. Experience seamless, high-performance, and fully customizable 3D orbital experiences—all with a single, one-time payment. No hidden fees, no ongoing subscriptions. Just pure, uncompromising creative control for as long as you use our software."
+          "Unlock the full potential of [Company Name] with our exclusive lifetime license. Experience seamless, high-performance, and fully customizable 3D orbital experiences—all with a single, one-time payment. No hidden fees, no ongoing subscriptions. Just pure, uncompromising creative control for as long as you use our software."
         </p>
       </div>
 
@@ -29,8 +29,8 @@ export default function RegistrationCode() {
         <div className="flex items-start gap-4">
           <CreditCard className="h-8 w-8 text-indigo-600 mt-1" />
           <div>
-            <h4 className="font-bold text-slate-900">1-Time Payment</h4>
-            <p className="text-sm text-slate-600">No subscriptions, no hidden fees. A single, transparent payment validates your license for life.</p>
+            <h4 className="font-bold text-slate-900">1-Time Payment & Channel Options</h4>
+            <p className="text-sm text-slate-600">No subscriptions, no hidden fees. Link your preferred payment channel (e.g., Stripe, PayPal, or other secure integrated options) to easily validate your license for life.</p>
           </div>
         </div>
       </div>
