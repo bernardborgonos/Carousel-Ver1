@@ -4,10 +4,10 @@ import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import DeploymentGuide from './DeploymentGuide';
 import DocumentationTable from './DocumentationTable';
-import { KillerCarouselOptions } from '../types';
+import { UNIT2CCacouselOptions } from '../types';
 
 interface DocumentationPageProps {
-  options: KillerCarouselOptions;
+  options: UNIT2CCacouselOptions;
 }
 
 export default function DocumentationPage({ options }: DocumentationPageProps) {
@@ -17,7 +17,7 @@ export default function DocumentationPage({ options }: DocumentationPageProps) {
     
     // Add title
     doc.setFontSize(22);
-    doc.text('StarPlugins Documentation', 20, 20);
+    doc.text('UNIT@C = Underground Nomadic Information Technology Documentation', 20, 20);
     
     // Add User Manual section
     doc.setFontSize(16);
