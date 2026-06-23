@@ -1,10 +1,10 @@
 import React from 'react';
-import { KillerCarouselOptions } from '../types';
+import { UNIT2CCacouselOptions } from '../types';
 import { Settings, Sparkles, Sliders, Layers, RefreshCw } from 'lucide-react';
 
 interface PlaygroundControlsProps {
-  options: KillerCarouselOptions;
-  onChange: (options: KillerCarouselOptions) => void;
+  options: UNIT2CCacouselOptions;
+  onChange: (options: UNIT2CCacouselOptions) => void;
   onReset: () => void;
   onPresetSelect: (presetName: string) => void;
   activePreset: string;
@@ -19,7 +19,7 @@ export default function PlaygroundControls({
 }: PlaygroundControlsProps) {
 
   // Handle number slides / updates helper
-  const handleNumChange = (key: keyof KillerCarouselOptions, val: number) => {
+  const handleNumChange = (key: keyof UNIT2CCacouselOptions, val: number) => {
     onChange({
       ...options,
       [key]: val,
@@ -27,7 +27,7 @@ export default function PlaygroundControls({
   };
 
   // Handle boolean slides / updates helper
-  const handleBoolChange = (key: keyof KillerCarouselOptions, val: boolean) => {
+  const handleBoolChange = (key: keyof UNIT2CCacouselOptions, val: boolean) => {
     onChange({
       ...options,
       [key]: val,
@@ -274,11 +274,11 @@ export default function PlaygroundControls({
       <div className="bg-slate-950 border border-indigo-950 rounded-xl p-4 flex flex-col gap-2.5" id="live-jquery-printer">
         <div className="flex items-center justify-between">
           <span className="text-[10px] font-bold text-slate-400 tracking-wider font-mono">CODE SYNC OUTPUT</span>
-          <span className="text-[9px] bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 px-1.5 py-0.5 rounded font-mono">STARPLUGINS API</span>
+          <span className="text-[9px] bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 px-1.5 py-0.5 rounded font-mono">UNIT@C = Underground Nomadic Information Technology API</span>
         </div>
         <pre className="text-[11px] leading-relaxed font-mono p-3 bg-black rounded-lg border border-slate-850 overflow-x-auto text-indigo-300">
-          {`// jQuery KillerCarousel initialization
-$('.carousel').killercarousel({
+          {`// jQuery UNIT2CCacousel initialization
+$('.carousel').unit2ccacousel({
   width: ${options.width},
   height: ${options.height},
   perspective: ${options.perspective},

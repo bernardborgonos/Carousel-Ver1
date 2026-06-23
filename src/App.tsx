@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import KillerCarousel from './components/KillerCarousel';
+import UNIT2CCacousel from './components/UNIT2CCacousel';
 import PlaygroundControls from './components/PlaygroundControls';
 import DocumentationTable from './components/DocumentationTable';
 import SystemEvaluator from './components/SystemEvaluator';
@@ -13,10 +13,10 @@ import ExamplesSuite, { OFFICIAL_MODES } from './components/ExamplesSuite';
 import DriveIntegration from './components/DriveIntegration';
 import { CAROUSEL_PRODUCTS } from './data/carouselItems';
 import { THEMES } from './data/themes';
-import { KillerCarouselOptions, Theme } from './types';
+import { UNIT2CCacouselOptions, Theme } from './types';
 import { Sparkles, Terminal, ShieldCheck, Heart, Cpu, AppWindow, Globe, Layers, Zap, HardDrive } from 'lucide-react';
 
-const INITIAL_OPTIONS: KillerCarouselOptions = {
+const INITIAL_OPTIONS: UNIT2CCacouselOptions = {
   width: 200,
   height: 250,
   perspective: 1000,
@@ -46,7 +46,7 @@ const INITIAL_OPTIONS: KillerCarouselOptions = {
   autoPlaySpeed: 5,
 };
 
-const PRESETS_MAP: Record<string, Partial<KillerCarouselOptions>> = {
+const PRESETS_MAP: Record<string, Partial<UNIT2CCacouselOptions>> = {
   default3d: {
     xRadius: 320,
     zRadius: 200,
@@ -110,7 +110,7 @@ const PRESETS_MAP: Record<string, Partial<KillerCarouselOptions>> = {
 };
 
 export default function App() {
-  const [options, setOptions] = useState<KillerCarouselOptions>(INITIAL_OPTIONS);
+  const [options, setOptions] = useState<UNIT2CCacouselOptions>(INITIAL_OPTIONS);
   const [themeId, setThemeId] = useState<string>(THEMES[0].id);
   const activeTheme = THEMES.find(t => t.id === themeId) || THEMES[0];
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -120,7 +120,7 @@ export default function App() {
   // Recreated 12-Examples states
   const [activeMode, setActiveMode] = useState<string>('tutorial_image');
   const [eventLogs, setEventLogs] = useState<string[]>([
-    `[${new Date().toLocaleTimeString()}] SYSTEMS ONLINE: Recreated StarPlugins v2.0 core engine bootstrapped successfully.`,
+    `[${new Date().toLocaleTimeString()}] SYSTEMS ONLINE: Recreated UNIT@C = Underground Nomadic Information Technology v2.0 core engine bootstrapped successfully.`,
     `[${new Date().toLocaleTimeString()}] PIPELINE: Preserved-3D Hardware matrix coordinates activated.`
   ]);
   const [isAjaxLoading, setIsAjaxLoading] = useState<boolean>(false);
@@ -220,7 +220,7 @@ export default function App() {
       });
     } else if (action === 'ajax_reload') {
       setIsAjaxLoading(true);
-      addEventLog('ajax_request', `POST request dispatched to mock StarPlugins JSON endpoint. Waiting latency response...`);
+      addEventLog('ajax_request', `POST request dispatched to mock UNIT@C = Underground Nomadic Information Technology JSON endpoint. Waiting latency response...`);
       
       setTimeout(() => {
         setIsAjaxLoading(false);
@@ -392,7 +392,7 @@ export default function App() {
 
               {/* The Live Carousel Canvas */}
               <div className="flex-1 min-h-[480px] bg-slate-950 border-b border-slate-850 flex items-center justify-center relative" id="carousel-canvas-cell">
-                <KillerCarousel
+                <UNIT2CCacousel
                   items={carouselItems}
                   options={options}
                   activeIndex={activeIndex}
