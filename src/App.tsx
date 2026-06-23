@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import KillerCarousel from './components/KillerCarousel';
+import UNIT2CCacousel from './components/UNIT2CCacousel';
 import PlaygroundControls from './components/PlaygroundControls';
 import DocumentationTable from './components/DocumentationTable';
 import SystemEvaluator from './components/SystemEvaluator';
@@ -13,10 +13,10 @@ import ExamplesSuite, { OFFICIAL_MODES } from './components/ExamplesSuite';
 import DriveIntegration from './components/DriveIntegration';
 import { CAROUSEL_PRODUCTS } from './data/carouselItems';
 import { THEMES } from './data/themes';
-import { KillerCarouselOptions, Theme } from './types';
+import { UNIT2CCacouselOptions, Theme } from './types';
 import { Sparkles, Terminal, ShieldCheck, Heart, Cpu, AppWindow, Globe, Layers, Zap, HardDrive } from 'lucide-react';
 
-const INITIAL_OPTIONS: KillerCarouselOptions = {
+const INITIAL_OPTIONS: UNIT2CCacouselOptions = {
   width: 200,
   height: 250,
   perspective: 1000,
@@ -46,7 +46,7 @@ const INITIAL_OPTIONS: KillerCarouselOptions = {
   autoPlaySpeed: 5,
 };
 
-const PRESETS_MAP: Record<string, Partial<KillerCarouselOptions>> = {
+const PRESETS_MAP: Record<string, Partial<UNIT2CCacouselOptions>> = {
   default3d: {
     xRadius: 320,
     zRadius: 200,
@@ -110,7 +110,7 @@ const PRESETS_MAP: Record<string, Partial<KillerCarouselOptions>> = {
 };
 
 export default function App() {
-  const [options, setOptions] = useState<KillerCarouselOptions>(INITIAL_OPTIONS);
+  const [options, setOptions] = useState<UNIT2CCacouselOptions>(INITIAL_OPTIONS);
   const [themeId, setThemeId] = useState<string>(THEMES[0].id);
   const activeTheme = THEMES.find(t => t.id === themeId) || THEMES[0];
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -120,7 +120,7 @@ export default function App() {
   // Recreated 12-Examples states
   const [activeMode, setActiveMode] = useState<string>('tutorial_image');
   const [eventLogs, setEventLogs] = useState<string[]>([
-    `[${new Date().toLocaleTimeString()}] SYSTEMS ONLINE: Recreated StarPlugins v2.0 core engine bootstrapped successfully.`,
+    `[${new Date().toLocaleTimeString()}] SYSTEMS ONLINE: Recreated UNIT@C = Underground Nomadic Information Technology v2.0 core engine bootstrapped successfully.`,
     `[${new Date().toLocaleTimeString()}] PIPELINE: Preserved-3D Hardware matrix coordinates activated.`
   ]);
   const [isAjaxLoading, setIsAjaxLoading] = useState<boolean>(false);
@@ -220,7 +220,7 @@ export default function App() {
       });
     } else if (action === 'ajax_reload') {
       setIsAjaxLoading(true);
-      addEventLog('ajax_request', `POST request dispatched to mock StarPlugins JSON endpoint. Waiting latency response...`);
+      addEventLog('ajax_request', `POST request dispatched to mock UNIT@C = Underground Nomadic Information Technology JSON endpoint. Waiting latency response...`);
       
       setTimeout(() => {
         setIsAjaxLoading(false);
@@ -266,10 +266,10 @@ export default function App() {
             </span>
             <div className="flex flex-col">
               <span className="font-sans font-extrabold text-slate-900 tracking-tight leading-none text-sm">
-                STARPLUGINS
+                UNIT@C = Underground Nomadic Information Technology
               </span>
               <span className="text-[9px] font-mono font-bold text-indigo-600 uppercase tracking-widest mt-0.5">
-                Killer Carousel 3D
+                UNIT2C Cacousel 3D
               </span>
             </div>
           </div>
@@ -304,7 +304,7 @@ export default function App() {
         <div className="mx-auto max-w-5xl px-6 relative z-10">
           <div className="flex flex-wrap items-center gap-2.5 mb-6" id="hero-taglines">
             <span className="inline-flex items-center gap-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs font-semibold text-indigo-400">
-              <Sparkles className="h-3 w-3 animate-pulse" /> Recreated StarPlugins v2.0
+              <Sparkles className="h-3 w-3 animate-pulse" /> Recreated UNIT@C = Underground Nomadic Information Technology v2.0
             </span>
             <span className="inline-flex items-center gap-1 rounded-full border border-slate-800 bg-slate-900 px-3 py-1 text-xs font-medium text-slate-400">
               <Terminal className="h-3 w-3 text-slate-500" /> React 19 Hardware Presets
@@ -312,11 +312,11 @@ export default function App() {
           </div>
 
           <h1 className="font-sans text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl" id="hero-heading">
-            The Legendary <span className="bg-gradient-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">Killer Carousel</span> Recreated
+            The Legendary <span className="bg-gradient-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">UNIT2C Cacousel</span> Recreated
           </h1>
 
           <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-400 sm:text-base" id="hero-lead">
-            Experience absolute coordinate projection engineering. Below is an exhaustive 1:1 functional recreation of StarPlugins' signature <strong>Killer Carousel jQuery plugin</strong>, fully reprogrammed as a physics-driven, hardware-accelerated, custom theoretical 3D model in robust React 19.
+            Experience absolute coordinate projection engineering. Below is an exhaustive 1:1 functional recreation of UNIT@C = Underground Nomadic Information Technology' signature <strong>UNIT2C Cacousel jQuery plugin</strong>, fully reprogrammed as a physics-driven, hardware-accelerated, custom theoretical 3D model in robust React 19.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4" id="hero-cta-buttons">
@@ -392,7 +392,7 @@ export default function App() {
 
               {/* The Live Carousel Canvas */}
               <div className="flex-1 min-h-[480px] bg-slate-950 border-b border-slate-850 flex items-center justify-center relative" id="carousel-canvas-cell">
-                <KillerCarousel
+                <UNIT2CCacousel
                   items={carouselItems}
                   options={options}
                   activeIndex={activeIndex}
@@ -484,7 +484,7 @@ export default function App() {
               </span>
             </div>
             <p className="text-2xs text-slate-500 leading-relaxed max-w-sm">
-              Reverse engineered design of Killer Carousel, demonstrating full React compatibility. Handled cleanly with zero templates.
+              Reverse engineered design of UNIT2C Cacousel, demonstrating full React compatibility. Handled cleanly with zero templates.
             </p>
           </div>
 

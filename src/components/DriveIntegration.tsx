@@ -3,7 +3,7 @@ import {
   Cloud, CloudUpload, CloudDownload, RefreshCw, 
   Trash2, ShieldAlert, Check, Loader2, Key, Info, ExternalLink
 } from 'lucide-react';
-import { KillerCarouselOptions } from '../types';
+import { UNIT2CCacouselOptions } from '../types';
 
 interface DriveFile {
   id: string;
@@ -13,8 +13,8 @@ interface DriveFile {
 }
 
 interface DriveIntegrationProps {
-  currentOptions: KillerCarouselOptions;
-  onLoadOptions: (opts: KillerCarouselOptions) => void;
+  currentOptions: UNIT2CCacouselOptions;
+  onLoadOptions: (opts: UNIT2CCacouselOptions) => void;
   onLogEvent?: (event: string, details: string) => void;
 }
 
@@ -56,7 +56,7 @@ export default function DriveIntegration({
     return [
       {
         id: 'mock-1',
-        name: 'killer-carousel-cozy-editorial.json',
+        name: 'unit2c-cacousel-cozy-editorial.json',
         content: JSON.stringify({
           width: 220,
           height: 280,
@@ -85,7 +85,7 @@ export default function DriveIntegration({
       },
       {
         id: 'mock-2',
-        name: 'killer-carousel-flat-panoramic.json',
+        name: 'unit2c-cacousel-flat-panoramic.json',
         content: JSON.stringify({
           width: 250,
           height: 180,
@@ -158,7 +158,7 @@ export default function DriveIntegration({
         onLogEvent('drive_request', 'Querying index listings from https://www.googleapis.com/drive/v3/files...');
       }
 
-      const query = encodeURIComponent("name contains 'killer-carousel-' and name contains '.json' and trashed = false");
+      const query = encodeURIComponent("name contains 'unit2c-cacousel-' and name contains '.json' and trashed = false");
       const url = `https://www.googleapis.com/drive/v3/files?q=${query}&fields=files(id,name,createdTime,modifiedTime)`;
       
       const response = await fetch(url, {
@@ -227,7 +227,7 @@ export default function DriveIntegration({
 
   // Create or overwrite a JSON file in Google Drive
   const handleUploadToDrive = async () => {
-    const fileName = `killer-carousel-${newPresetName.toLowerCase().replace(/\s+/g, '-')}.json`;
+    const fileName = `unit2c-cacousel-${newPresetName.toLowerCase().replace(/\s+/g, '-')}.json`;
     setIsSaving(true);
     setErrorMsg(null);
 

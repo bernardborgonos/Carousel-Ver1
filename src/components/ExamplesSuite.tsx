@@ -4,14 +4,14 @@ import {
   Activity, ArrowRight, RefreshCw, Layers, Sliders, CheckSquare,
   Navigation, Terminal, TerminalIcon, Cpu, BookOpen
 } from 'lucide-react';
-import { KillerCarouselOptions } from '../types';
+import { UNIT2CCacouselOptions } from '../types';
 
 export interface ExampleSuiteMode {
   id: string;
   name: string;
   description: string;
   category: string;
-  defaultOptions: Partial<KillerCarouselOptions>;
+  defaultOptions: Partial<UNIT2CCacouselOptions>;
 }
 
 export const OFFICIAL_MODES: ExampleSuiteMode[] = [
@@ -19,7 +19,7 @@ export const OFFICIAL_MODES: ExampleSuiteMode[] = [
     id: 'tutorial_image',
     name: 'Tutorial: Image Carousel',
     category: 'GETTING STARTED',
-    description: 'The standard setup of Killer Carousel demonstrating high-fidelity watch and camera item cards, deep reflections, and dynamic radial rotation.',
+    description: 'The standard setup of UNIT2C Cacousel demonstrating high-fidelity watch and camera item cards, deep reflections, and dynamic radial rotation.',
     defaultOptions: {
       width: 200,
       height: 250,
@@ -109,7 +109,7 @@ export const OFFICIAL_MODES: ExampleSuiteMode[] = [
   },
   {
     id: 'carousel_api',
-    name: 'Killer Carousel API',
+    name: 'UNIT2C Cacousel API',
     category: 'PROGRAMMATIC CONTROL',
     description: 'Use the programmatic API controller panel below to manually spin, scroll to, resume, or pause the rotational state from external custom scripts.',
     defaultOptions: {
@@ -196,10 +196,10 @@ export default function ExamplesSuite({
               <BookOpen className="h-4 w-4" /> RECREATED EXAMPLES DIRECTORY
             </div>
             <h3 className="text-xl md:text-2xl font-extrabold text-white mt-2">
-              StarPlugins Core Feature Demonstration Suite
+              UNIT@C = Underground Nomadic Information Technology Core Feature Demonstration Suite
             </h3>
             <p className="text-slate-450 text-xs sm:text-sm mt-1 max-w-2xl leading-relaxed">
-              We recreated the complete <strong>12-scenario showcase ecosystem</strong> of the original StarPlugins portal. Click a template below to load precise coordinates, simulation structures, and console monitors immediately.
+              We recreated the complete <strong>12-scenario showcase ecosystem</strong> of the original UNIT@C = Underground Nomadic Information Technology portal. Click a template below to load precise coordinates, simulation structures, and console monitors immediately.
             </p>
           </div>
           <span className="text-[10px] font-mono font-bold text-slate-500 border border-slate-800 px-3 py-1.5 rounded-lg shrink-0">
@@ -254,10 +254,10 @@ export default function ExamplesSuite({
 
             {/* Config difference preview layout code block */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-3.5" id="code-snippet-preset">
-              <span className="text-[9px] font-bold text-slate-500 font-mono block uppercase">Original StarPlugins jQuery Initialization:</span>
+              <span className="text-[9px] font-bold text-slate-500 font-mono block uppercase">Original UNIT@C = Underground Nomadic Information Technology jQuery Initialization:</span>
               <pre className="text-[10px] text-slate-350 font-mono leading-relaxed mt-1 overflow-x-auto whitespace-pre p-2 bg-slate-950/60 rounded border border-slate-850/80">
 {`// jQuery legacy integration
-$('#carousel').killerCarousel({
+$('#carousel').unit2cCacousel({
   width: ${currentModeInfo.defaultOptions.width || 200},
   height: ${currentModeInfo.defaultOptions.height || 250},
   xRadius: ${currentModeInfo.defaultOptions.xRadius || 'Auto'},
@@ -399,7 +399,7 @@ $('#carousel').killerCarousel({
                 <div>
                   <h5 className="text-xs font-bold text-white uppercase tracking-wider">Example Calibration Parameters</h5>
                   <p className="text-[11px] text-slate-400 mt-1.5 leading-relaxed">
-                    This example loads custom options carefully selected to mirror classic StarPlugins features. Feel free to tweak them manually using the sliders panel!
+                    This example loads custom options carefully selected to mirror classic UNIT@C = Underground Nomadic Information Technology features. Feel free to tweak them manually using the sliders panel!
                   </p>
                 </div>
                 <div className="mt-4 flex flex-col gap-1.5 text-[10px] text-slate-400 font-mono border-t border-slate-800 pt-3">
