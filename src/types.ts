@@ -21,7 +21,7 @@ export interface Theme {
   cardStyle: string;
 }
 
-export interface KillerCarouselOptions {
+export interface UNIT2CCacouselOptions {
   width: number; // item width
   height: number; // item height
   perspective: number; // 3d perspective depth

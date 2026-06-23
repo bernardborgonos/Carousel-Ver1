@@ -14,7 +14,7 @@ export default function RegistrationCode() {
       <div className="bg-slate-50 border border-slate-100 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold text-slate-900 mb-4 tracking-tight">Professional Marketing Statement</h3>
         <p className="text-slate-700 leading-relaxed italic">
-          "Unlock the full potential of StarPlugins with our exclusive lifetime license. Experience seamless, high-performance, and fully customizable 3D orbital experiences—all with a single, one-time payment. No hidden fees, no ongoing subscriptions. Just pure, uncompromising creative control for as long as you use our software."
+          "Unlock the full potential of UNIT@C = Underground Nomadic Information Technology with our exclusive lifetime license. Experience seamless, high-performance, and fully customizable 3D orbital experiences—all with a single, one-time payment. No hidden fees, no ongoing subscriptions. Just pure, uncompromising creative control for as long as you use our software."
         </p>
       </div>
 
