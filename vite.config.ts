@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -22,6 +23,11 @@ export default defineConfig(() => {
       setupFiles: "./vitest.setup.ts",
       // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: false,
+    },
+    test: {
+      environment: 'jsdom',
+      setupFiles: ['./src/test/setup.ts'],
+      globals: true,
     },
   };
 });
