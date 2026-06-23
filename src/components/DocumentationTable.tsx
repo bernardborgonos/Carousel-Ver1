@@ -1,9 +1,9 @@
 import React from 'react';
-import { KillerCarouselOptions } from '../types';
+import { UNIT2CCacouselOptions } from '../types';
 import { Check, Info, ShieldCheck } from 'lucide-react';
 
 interface DocumentationTableProps {
-  options: KillerCarouselOptions;
+  options: UNIT2CCacouselOptions;
 }
 
 export default function DocumentationTable({ options }: DocumentationTableProps) {
@@ -113,7 +113,7 @@ export default function DocumentationTable({ options }: DocumentationTableProps)
           <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">Compliance Audit</span>
           <h2 className="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">API Parameters Carryout</h2>
           <p className="mt-2 text-slate-600 max-w-xl">
-            Audit logs matching the starplugins standard parameters configuration specs with our fully integrated React replica.
+            Audit logs matching the unit@c = underground nomadic information technology standard parameters configuration specs with our fully integrated React replica.
           </p>
         </div>
 

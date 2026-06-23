@@ -1,12 +1,12 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
-import { CarouselItem, KillerCarouselOptions, Theme, ViewMode } from '../types';
+import { CarouselItem, UNIT2CCacouselOptions, Theme, ViewMode } from '../types';
 import { THEMES } from '../data/themes';
 import { MoveLeft, MoveRight, RefreshCw, Maximize2, Minimize2, Square, Settings, ChevronLeft, ChevronRight, BookOpen, Maximize, Smartphone, Code, Cpu, Calendar, GitBranch, MessageSquare, Layout, Navigation, Database, Edit } from 'lucide-react';
 import NavigationCarouselPage from './NavigationCarouselPage';
 
-interface KillerCarouselProps {
+interface UNIT2CCacouselProps {
   items: CarouselItem[];
-  options: KillerCarouselOptions;
+  options: UNIT2CCacouselOptions;
   activeIndex: number;
   onActiveIndexChange: (index: number) => void;
   onFPSChange?: (fps: number) => void;
@@ -20,7 +20,7 @@ interface KillerCarouselProps {
   onRecordsUpdated?: (items: CarouselItem[]) => void;
 }
 
-export default function KillerCarousel({
+export default function UNIT2CCacousel({
   items,
   options,
   activeIndex,
@@ -34,7 +34,7 @@ export default function KillerCarousel({
   onThemeChange,
   onModuleClick,
   onRecordsUpdated,
-}: KillerCarouselProps) {
+}: UNIT2CCacouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const totalItems = items.length;
   const [viewMode, setViewMode] = useState<ViewMode>(() => {
@@ -108,13 +108,13 @@ export default function KillerCarousel({
   };
 
   // Internal state for options, initialized from props
-  const [localOptions, setLocalOptions] = useState<KillerCarouselOptions>(options);
+  const [localOptions, setLocalOptions] = useState<UNIT2CCacouselOptions>(options);
 
   useEffect(() => {
     setLocalOptions(options);
   }, [options]);
 
-  const updateOption = <K extends keyof KillerCarouselOptions>(key: K, value: KillerCarouselOptions[K]) => {
+  const updateOption = <K extends keyof UNIT2CCacouselOptions>(key: K, value: UNIT2CCacouselOptions[K]) => {
     setLocalOptions(prev => ({ ...prev, [key]: value }));
   };
 
@@ -122,7 +122,7 @@ export default function KillerCarousel({
     setLocalOptions(options);
   };
 
-  const PRESETS: Record<string, Partial<KillerCarouselOptions>> = {
+  const PRESETS: Record<string, Partial<UNIT2CCacouselOptions>> = {
     'Default 3D': { xRadius: 300, zRadius: 200, tilt: 0, perspective: 1000 },
     'Pure 2D Flat': { xRadius: 400, zRadius: 0, tilt: 0, perspective: 0 },
     'Classic Coverflow': { xRadius: 300, zRadius: 50, tilt: 0, perspective: 800 },
@@ -156,7 +156,7 @@ export default function KillerCarousel({
   // Trigger telemetry logs
   useEffect(() => {
     if (onEventTriggered) {
-      onEventTriggered('onInitCompleted', `Killer Carousel initialized in mode [${activeMode}] with ${totalItems} items.`);
+      onEventTriggered('onInitCompleted', `UNIT2C Cacousel initialized in mode [${activeMode}] with ${totalItems} items.`);
     }
   }, [activeMode, totalItems]);
 
@@ -731,7 +731,7 @@ export default function KillerCarousel({
   return (
     <div
       ref={containerRef}
-      id="killer-carousel-wrapper"
+      id="unit2c-cacousel-wrapper"
       className={`flex items-center justify-center overflow-hidden bg-cover bg-center px-4 select-none touch-none transition-all duration-500 ${getContainerStyles()}`}
       style={{ 
         backgroundImage: `linear-gradient(rgba(${localOptions.overlayColor}, ${localOptions.overlayOpacity}), rgba(${localOptions.overlayColor}, ${localOptions.overlayOpacity})), ${activeTheme.backgroundImage}`,
