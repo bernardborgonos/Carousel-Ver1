@@ -20,14 +20,9 @@ export default defineConfig(() => {
     test: {
       globals: true,
       environment: "jsdom",
-      setupFiles: "./vitest.setup.ts",
+      setupFiles: ["./vitest.setup.ts", "./src/test/setup.ts"],
       // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: false,
-    },
-    test: {
-      environment: 'jsdom',
-      setupFiles: ['./src/test/setup.ts'],
-      globals: true,
     },
   };
 });

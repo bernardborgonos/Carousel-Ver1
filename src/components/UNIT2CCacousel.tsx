@@ -49,9 +49,14 @@ export default function UNIT2CCacousel({
   const [demoRecords, setDemoRecords] = useState<CarouselItem[]>(() => {
     const cached = localStorage.getItem('demoRecords');
     if (cached) {
-      const parsed = JSON.parse(cached);
-      if (Date.now() - parsed.timestamp < 3600000) return parsed.items;
-      localStorage.removeItem('demoRecords');
+      try {
+        const parsed = JSON.parse(cached);
+        if (Date.now() - parsed.timestamp < 3600000) return parsed.items;
+        localStorage.removeItem('demoRecords');
+      } catch (error) {
+        console.error("Failed to parse demoRecords from localStorage:", error);
+        localStorage.removeItem('demoRecords');
+      }
     }
     return [];
   });
